@@ -1,0 +1,1469 @@
+:root {
+    --primary-color: #797979;
+    --secondary-color: #f4a636;
+    --dark-color1: #111111;
+    --dark-color2: #17384e;
+    --white-color: #ffffff;
+    --transition: 0.4s ease-in-out;
+  }
+  :after,
+  :before {
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+  }
+  body {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+    background-color: #fff;
+    color: var(--primary-color);
+    font-family: Lato, sans-serif;
+    overflow-x: hidden;
+    font-weight: 500;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Philosopher, sans-serif;
+    font-weight: 400;
+  }
+  a,
+  a:focus,
+  a:hover,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  .as_padderTop10 {
+    padding-top: 10px;
+  }
+  .as_padderTop20 {
+    padding-top: 20px;
+  }
+  .as_padderTop30 {
+    padding-top: 30px;
+  }
+  .as_padderTop40 {
+    padding-top: 40px;
+  }
+  .as_padderTop50 {
+    padding-top: 50px;
+  }
+  .as_padderTop60 {
+    padding-top: 60px;
+  }
+  .as_padderTop70 {
+    padding-top: 70px;
+  }
+  .as_padderTop80 {
+    padding-top: 80px;
+  }
+  .as_padderTop90 {
+    padding-top: 90px;
+  }
+  .as_padderTop100 {
+    padding-top: 90px;
+  }
+  .as_padderBottom5 {
+    padding-bottom: 5px;
+  }
+  .as_padderBottom10 {
+    padding-bottom: 10px;
+  }
+  .as_padderBottom20 {
+    padding-bottom: 20px;
+  }
+  .as_padderBottom30 {
+    padding-bottom: 30px;
+  }
+  .as_padderBottom40 {
+    padding-bottom: 40px;
+  }
+  .as_padderBottom50 {
+    padding-bottom: 50px;
+  }
+  .as_padderBottom60 {
+    padding-bottom: 60px;
+  }
+  .as_padderBottom70 {
+    padding-bottom: 70px;
+  }
+  .as_padderBottom80 {
+    padding-bottom: 80px;
+  }
+  .as_padderBottom90 {
+    padding-bottom: 90px;
+  }
+  .as_padderBottom100 {
+    padding-bottom: 90px;
+  }
+  .as_margin0 {
+    margin: 0 !important;
+  }
+  .as_font14 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .as_heading {
+    font-size: 36px;
+    text-transform: capitalize;
+    padding-bottom: 17px;
+    position: relative;
+    margin: -8px 0 0;
+    color: var(--dark-color1);
+    font-weight: 600;
+  }
+  .as_btn,
+  .as_btn:focus,
+  .as_btn:visited {
+    height: 45px;
+    background-image: -moz-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+    background-image: -webkit-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+    background-image: -ms-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+    font-size: 14px;
+    text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 23px;
+    border: none !important;
+    position: relative;
+    color: var(--white-color);
+    border-radius: 45px;
+    outline: 0;
+    min-width: 160px;
+    justify-content: center;
+    outline: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .as_btn:after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-image: -moz-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+    background-image: -webkit-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+    background-image: -ms-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+  }
+  .as_btn:hover:after {
+    left: 0;
+  }
+  .as_btn:hover {
+    color: var(--white-color) !important;
+  }
+  .as_banner_wrapper {
+    background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/bg1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 170px 0 150px;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+  }
+  .as_banner_detail .as_btn {
+    background: #fff;
+    color: var(--dark-color1);
+    font-weight: 600;
+    transition: all 0.3s linear;
+  }
+  .as_banner_detail .as_btn:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }
+  .as_banner_wrapper:after {
+    position: absolute;
+    content: "";
+    background: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/shape.svg)
+      no-repeat;
+    width: 100%;
+    height: 273px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(-1);
+    z-index: 1;
+  }
+  .as_banner_detail h5 {
+    font-size: 26px;
+    margin: 0 0 5px;
+  }
+  .as_banner_detail h1 {
+    font-size: 54px;
+    line-height: 62px;
+    margin: 0 0 13px;
+  }
+  .as_banner_detail p {
+    margin-bottom: 26px;
+  }
+  .as_banner_img {
+    position: relative;
+  }
+  .as_banner_img .as_hand_bg {
+    animation: spin 12s infinite linear;
+    -webkit-animation: spin 12s infinite linear;
+    -moz-animation: spin 12s infinite linear;
+    display: inline-block;
+  }
+  .as_banner_img .as_hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 60%;
+  }
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  .as_about_wrapper {
+    background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .as_paragraph_wrapper {
+    padding-left: 20px;
+    border-left: 2px solid var(--secondary-color);
+  }
+  .as_paragraph_wrapper {
+    padding-left: 20px;
+    border-left: 2px solid #f4a636;
+    margin-top: 20px;
+  }
+  .as_contact_expert {
+    display: flex;
+    margin: 40px 0;
+    align-items: center;
+    color: var(--dark-color1);
+  }
+  .as_contact_expert .as_icon {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    position: relative;
+  }
+  .as_year_ex {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-family: Philosopher, sans-serif;
+    margin-right: 10px;
+  }
+  .as_contact_expert .as_icon:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #dcdcdc;
+    content: "";
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+  }
+  .as_contact_expert:hover .as_icon:before {
+    animation: spin 9s infinite linear;
+    -webkit-animation: spin 9s infinite linear;
+    -moz-animation: spin 9s infinite linear;
+  }
+  .as_contact_expert h5 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .as_contact_expert h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .as_aboutimg {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .as_aboutimg img {
+    display: inline-block;
+  }
+  @keyframes zoom {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  .as_contact_detail {
+    background-color: #f6fbff;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  .as_error_wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/bg12.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+  }
+  .as_error_wrapper h2 {
+    text-transform: capitalize;
+    letter-spacing: 6px;
+    font-size: 35px;
+  }
+  .as_error_wrapper p {
+    font-size: 40px;
+    margin-bottom: 40px;
+    line-height: 48px;
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1200px;
+    }
+  }
+  @media (max-width: 1800px) {
+    .as_banner_wrapper:after {
+      bottom: -1px;
+    }
+  }
+  @media (max-width: 1199px) {
+    .as_aboutimg::after {
+      top: 85px;
+      right: 80px;
+    }
+    .as_aboutimg::before {
+      left: -45px;
+      bottom: -40px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .as_banner_detail h1 {
+      font-size: 40px;
+      line-height: 52px;
+    }
+    .as_banner_detail h5 {
+      font-size: 23px;
+    }
+  }
+  @media (max-width: 991px) {
+    .as_heading {
+      font-size: 28px;
+    }
+    .as_banner_detail h1 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .as_banner_detail h5 {
+      font-size: 18px;
+    }
+    .as_aboutimg::after,
+    .as_aboutimg::before {
+      display: none;
+    }
+    .as_aboutimg > img {
+      margin: 0 0 30px auto;
+      width: 100%;
+    }
+    .as_padderBottom80 {
+      padding-bottom: 50px;
+    }
+    .as_padderTop80 {
+      padding-top: 50px;
+    }
+    .as_banner_wrapper {
+      padding: 240px 0 100px;
+    }
+    .as_contact_detail {
+      margin-bottom: 50px;
+    }
+    .as_banner_img {
+      margin-top: 50px;
+    }
+  }
+  @media (max-width: 600px) {
+    .as_year_ex {
+      font-size: 40px;
+    }
+    .as_contact_expert .as_icon {
+      margin-bottom: 15px;
+      margin-left: -10px;
+    }
+  }
+  @media (max-width: 450px) {
+    .as_contact_detail {
+      padding: 20px;
+    }
+    .as_contact_expert h1 {
+      font-size: 24px;
+    }
+    .form-control {
+      height: 45px;
+      background-color: #fff;
+      border: 1px solid rgb(121 121 121 / 20%);
+      outline: 0;
+      box-shadow: none !important;
+      color: var(--primary-color);
+      padding: 0 28px;
+      border-radius: 45px;
+    }
+    .form-control:focus {
+      border-color: var(--secondary-color) !important;
+    }
+    .form-control::placeholder {
+      color: #797979;
+    }
+    .as_info_detail:last-child {
+      margin-right: 0;
+    }
+    .as_info_detail {
+      border-bottom: 1px solid rgb(255 255 255 / 10%);
+      padding: 20px 0;
+    }
+    .as_user img {
+      border-radius: 100%;
+      border: 3px solid #fff;
+    }
+    .as_user {
+      position: relative;
+      margin-left: 30px;
+    }
+    .as_user span {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 100%;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+      line-height: 14px;
+      padding-left: 2px;
+    }
+    .as_info_detail ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .as_info_detail ul li {
+      display: inline-flex;
+      padding: 0 15px;
+    }
+    .as_info_detail ul li a,
+    .as_info_detail ul li a:focus {
+      text-decoration: none;
+      color: inherit;
+    }
+    .form-group {
+      margin: 10px 0 10px;
+    }
+    .as_info_box {
+      display: flex;
+      align-items: center;
+    }
+    .as_info_box .as_icon {
+      width: 45px;
+      border: 1px solid var(--secondary-color);
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      position: relative;
+    }
+    li.as_info_box p {
+      margin-left: 25px;
+    }
+    .as_contact_wrapper .as_appointment_form textarea.form-control {
+      height: 243px;
+    }
+    .as_contact_detail ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .as_contact_detail ul li {
+      margin-bottom: 30px;
+    }
+    .as_appointment_form .form-control {
+      border: 1px solid #e7e7e7;
+      border-radius: 45px;
+    }
+    .as_appointment_form .form-control::placeholder {
+      color: #797979;
+    }
+    .as_appointment_form .form-group {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .as_appointment_form .form-group > span {
+      position: absolute;
+      right: 20px;
+      top: 7px;
+    }
+    .as_appointment_form textarea.form-control {
+      height: 200px;
+      resize: none;
+      border-radius: 20px;
+    }
+    .as_error_detail_box {
+      position: relative;
+      z-index: 1;
+    }
+    .as_error_detail_box .as_btn {
+      background: #fff;
+      color: var(--dark-color1);
+    }
+    textarea.form-control {
+      height: 120px;
+      resize: none;
+      padding-top: 15px;
+      border-radius: 20px;
+    }
+    .as_astro img {
+      border-radius: 10px;
+    }
+    .as_astro h5 {
+      font-size: 18px;
+      color: var(--dark-color1);
+      font-weight: 600;
+      padding-top: 6px;
+    }
+    .as_astro {
+      cursor: pointer;
+    }
+    .as_astro input:checked + span > span:after,
+    .as_astro:hover span > span:after {
+      transform: none;
+    }
+    .as_astro > span > :after {
+      position: absolute;
+      content: "";
+      border-radius: 10px;
+      background-image: -moz-linear-gradient(0deg, #fdc830 0, #f37335 100%);
+      background-image: -webkit-linear-gradient(0deg, #fdc830 0, #f37335 100%);
+      background-image: -ms-linear-gradient(0deg, #fdc830 0, #f37335 100%);
+      opacity: 0.502;
+      left: 6px;
+      top: 6px;
+      right: 6px;
+      bottom: 6px;
+      transform: scale(0);
+    }
+    .as_astro > span > span {
+      position: relative;
+      display: inline-flex;
+    }
+  }
+  @media (min-width: 1400px) and (max-width: 1810px) {
+    .as_info_detail {
+      padding-right: 50px;
+    }
+    .as_info_detail ul li {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1450px) {
+    .as_error_detail_box img {
+      width: 60%;
+      display: inline-block;
+    }
+  }
+  @media (max-width: 1260px) {
+    .as_info_detail {
+      padding-right: 0;
+    }
+  }
+  @media (max-width: 1199px) {
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .as_info_detail {
+      padding-right: 6px;
+    }
+    .as_info_detail ul li {
+      padding: 5px;
+    }
+  }
+  @media (max-width: 768px) {
+    .as_info_detail {
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
+  @media (max-width: 600px) {
+    .as_info_detail ul {
+      text-align: center;
+    }
+    .as_info_detail ul li {
+      padding: 0;
+      display: block;
+    }
+    li.as_info_box p {
+      margin-left: 10px;
+    }
+  }
+  @media (max-width: 355px) {
+    .as_info_box .as_icon {
+      width: 50px;
+    }
+    .as_logo {
+      display: flex;
+    }
+    .as_horoscope_wrapper {
+      background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/bg3.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .as_service_wrapper {
+      background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/bg4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+    .as_service_img {
+      position: relative;
+    }
+    .as_service_img .as_service_img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 150px;
+    }
+    .as_service_img:after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      transform: translateX(-50%);
+      width: 207px;
+      height: 651px;
+      background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/service_shape.png);
+      bottom: -35px;
+    }
+    .as_service_single .as_service_img:after {
+      display: none;
+    }
+    .as_blog_wrapper {
+      background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/bg4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .as_blog_img {
+      position: relative;
+      margin-bottom: 36px;
+    }
+    .as_footer_wrapper {
+      background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/bg8.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: #fff;
+      z-index: 1;
+    }
+    .as_footer_wrapper:before {
+      position: absolute;
+      content: "";
+      background: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/shape.svg)
+        no-repeat;
+      width: 100%;
+      height: 273px;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+    .as_footer_wrapper:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #111;
+      opacity: 0.87;
+      z-index: -1;
+    }
+    .as_footer_inner {
+      display: flex;
+      border-bottom: 1px solid rgb(255 255 255 / 30%);
+    }
+    .as_footer_widget {
+      margin-top: 30px;
+    }
+    .as_footer_widget > p {
+      margin: 18px 0 20px;
+      font-size: 14px;
+    }
+    .as_footer_widget > ul > li:hover {
+      color: var(--secondary-color);
+    }
+    .as_footer_widget ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .as_footer_widget > ul > li {
+      padding-bottom: 10px;
+      position: relative;
+      font-size: 14px;
+      padding-left: 18px;
+    }
+    .as_footer_widget > ul > li span svg {
+      fill: #fff;
+      margin-right: 10px;
+    }
+    .as_footer_widget > ul > li:hover span {
+      transition: none;
+    }
+    .as_footer_heading {
+      font-size: 20px;
+      line-height: 46px;
+      margin: 0;
+      position: relative;
+      margin-bottom: 22px;
+    }
+    .as_footer_widget .as_contact_list li {
+      padding-left: 0;
+      display: flex;
+      align-items: baseline;
+    }
+    .as_footer_widget > ul > li:before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: #fff;
+      border-radius: 100%;
+      left: 0;
+      top: 9px;
+    }
+    .as_footer_widget .as_contact_list li:before {
+      display: none;
+    }
+    .as_footer_widget .as_contact_list li img {
+      margin: 0 15px 0 0;
+      transform: translateY(3px);
+    }
+    .as_footer_widget .as_contact_list li p {
+      margin: 0;
+    }
+    .as_copyright_wrapper {
+      padding: 23px 0 27px;
+      display: flex;
+      justify-content: center;
+    }
+    .as_footer_widget > ul > li a {
+      transition: 0.2s linear;
+    }
+    .as_service_ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .as_service_ul li {
+      padding: 0 0 6px 23px;
+      position: relative;
+    }
+    .as_service_ul li:before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: url(../images/svg/arrow.svg) no-repeat center;
+      left: 0;
+      top: 8px;
+    }
+    .as_service_widget h3 {
+      font-size: 22px;
+      display: inline-flex;
+      padding-bottom: 11px;
+    }
+    .as_service_widget ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .as_service_widget ul li {
+      font-size: 14px;
+      margin-bottom: 7px;
+      padding-left: 24px;
+      position: relative;
+    }
+    .as_service_widget ul li a {
+      display: flex;
+      justify-content: space-between;
+      transition: none;
+    }
+    .as_service_widget ul li a span {
+      transition: none;
+    }
+    .as_service_widget ul li a span:first-child {
+      border-bottom: 1px solid transparent;
+    }
+    .as_service_widget ul li:hover a span:first-child {
+      border-color: var(--secondary-color);
+    }
+    .as_service_widget ul li:hover {
+      color: var(--secondary-color);
+    }
+    .as_service_widget ul li:before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: url(../images/svg/arrow.svg) no-repeat center;
+      left: 0;
+      top: 8px;
+    }
+    .as_service_widget ul li:hover:before {
+      background: url(../images/svg/arrowHover.svg) no-repeat center;
+    }
+    .as_service_widget .as_heading::after {
+      width: 75%;
+    }
+    .as_widget {
+      margin-bottom: 50px;
+    }
+    .as_widget ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .as_widget ul li {
+      line-height: 20px;
+      padding: 15px 0;
+      border-top: 1px solid #e7e7e7;
+      text-transform: capitalize;
+    }
+    .as_widget ul li a {
+      transition: none;
+    }
+    .as_widget ul li:hover {
+      color: var(--secondary-color);
+    }
+    .as_widget ul li:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+    .as_widget ul li:last-child {
+      padding-bottom: 0;
+    }
+    .as_service_single > h3 {
+      color: var(--dark-color1);
+      padding: 5px 0 3px;
+      font-weight: 600;
+    }
+    .as_service_single > ul {
+      padding: 0 150px 0 17px;
+      margin: 0 0 14px;
+    }
+    .as_service_single ul li {
+      margin-bottom: 6px;
+    }
+    .as_astro:hover span > span:after {
+      transform: none;
+    }
+  }
+  @media (max-width: 1800px) {
+    .as_footer_wrapper:before {
+      top: -1px;
+    }
+  }
+  @media (max-width: 1199px) {
+    .as_service_img:after {
+      bottom: -100px;
+    }
+    .as_copyright_wrapper {
+      display: block;
+    }
+    .as_service_img:after {
+      bottom: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .as_blog_img img {
+      width: 100%;
+    }
+    .as_service_img:after {
+      bottom: -40px;
+    }
+    .as_service_img .as_service_img {
+      position: unset;
+      transform: translate(0, 0);
+      margin: auto;
+    }
+    .as_service_img {
+      position: relative;
+      margin: 50px 0;
+      text-align: center;
+    }
+    .as_service_single > ul {
+      padding: 0 0 0 18px;
+    }
+    .as_blog_wrapper.as_padderBottom90 {
+      padding-bottom: 0;
+    }
+    .as_logo {
+      align-items: center;
+      justify-content: center;
+    }
+    .as_verticle_center {
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media (max-width: 991px) {
+    .as_banner_detail h1 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .as_verticle_center {
+      display: block;
+    }
+  }
+  @media (max-width: 768px) {
+    .as_verticle_center {
+      display: block;
+    }
+    .as_toggle {
+      display: none;
+    }
+    .as_white {
+      color: var(--white-color);
+    }
+    .as_header_wrapper {
+      background-color: rgb(17 16 17);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9;
+    }
+    .as_menu {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .as_menu {
+      display: inline-flex;
+      text-transform: capitalize;
+      margin: 0 30px;
+      color: #fff;
+      position: relative;
+    }
+    .as_header_detail {
+      width: calc(100% - 449px);
+    }
+    .as_menu {
+      padding: 23px 0;
+      position: relative;
+      transition: all 0.3s linear;
+    }
+    .as_menu:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background-color: var(--secondary-color);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+    }
+    .as_menu:hover:before {
+      width: 29px;
+    }
+    .as_menu:hover {
+      color: var(--secondary-color);
+    }
+    .as_infobox {
+      display: flex;
+      color: #fff;
+    }
+    .as_infobox:hover {
+      color: var(--secondary-color);
+    }
+    .as_info_detail ul li .as_infobox > span {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .as_link {
+      text-transform: capitalize;
+      font-size: 15px;
+      line-height: 24px;
+      color: var(--dark-color1);
+      letter-spacing: 0.6px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      transition: none;
+      cursor: pointer;
+    }
+    .as_link span {
+      margin: -1px 0 0 5px;
+    }
+    .as_about_page .as_service_wrapper {
+      background-image: url(../images/bg9.jpg);
+    }
+  }
+  @media (min-width: 1400px) and (max-width: 1810px) {
+    .as_header_detail {
+      width: calc(100% - 220px);
+    }
+    .as_info_detail {
+      padding-right: 50px;
+    }
+    .as_menu_wrapper {
+      padding-right: 50px;
+    }
+    .as_info_detail ul li,
+    .as_menu > ul > li {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1399px) {
+    .as_header_detail {
+      width: calc(100% - 220px);
+    }
+    .as_infobox {
+      font-size: 14px;
+    }
+    .as_menu > ul > li {
+      margin: 0 10px;
+    }
+  }
+  @media (max-width: 1360px) {
+    .as_menu ul li a {
+      font-size: 13px;
+    }
+  }
+  @media (max-width: 1260px) {
+    .as_header_wrapper .as_info_detail .row {
+      display: flex;
+      align-items: center;
+    }
+    .as_menu ul li a {
+      padding: 13px 0;
+    }
+    .as_info_detail,
+    .as_menu_wrapper {
+      padding-right: 0;
+    }
+    .as_header_wrapper .as_info_detail .row > div {
+      flex: 1;
+    }
+  }
+  @media (max-width: 991px) {
+    .as_infobox .as_infoicon svg {
+      width: 15px;
+    }
+    .as_infobox .as_infoicon {
+      margin-right: 5px;
+    }
+    .as_header_detail {
+      width: calc(100% - 170px);
+    }
+    .as_info_detail,
+    .as_menu_wrapper {
+      padding-right: 6px;
+    }
+  }
+  @media (max-width: 768px) {
+    .as_toggle {
+      display: flex;
+      cursor: pointer;
+    }
+    .as_menu ul li,
+    .as_menu ul li a {
+      display: block;
+    }
+    .as_menu {
+      position: fixed;
+      left: -200px;
+      top: 0;
+      bottom: 0;
+      background-color: var(--dark-color1);
+      z-index: 999;
+      width: 200px;
+      border-right: 2px solid var(--secondary-color);
+      opacity: 0;
+      visibility: hidden;
+    }
+    .as_menu li {
+      display: flex;
+      border-bottom: 1px solid rgb(255 255 255 / 10%);
+      margin: 0;
+    }
+    .as_menu ul li a:before {
+      display: none;
+    }
+    .as_menu_wrapper {
+      padding: 12px 10px;
+    }
+    .as_info_detail {
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+    }
+    .as_header_wrapper {
+      background-color: rgb(17 16 17);
+    }
+  }
+  @media (max-width: 600px) {
+    .as_header_wrapper .as_info_detail .row {
+      flex-direction: column;
+    }
+    .as_info_detail ul {
+      text-align: center;
+    }
+    .as_infobox {
+      justify-content: center;
+    }
+    .as_subheading {
+      font-size: 22px;
+      text-transform: capitalize;
+      color: var(--dark-color1);
+    }
+    .as_service_img .as_service_circle {
+      animation: spin 12s infinite linear;
+      -webkit-animation: spin 12s infinite linear;
+      -moz-animation: spin 12s infinite linear;
+    }
+    .as_service_box {
+      background-color: #fff;
+      padding: 59px 22px 25px;
+      margin-top: 30px;
+      box-shadow: 0 0 13px 0 rgb(0 0 0 / 4%);
+      border: 1px solid #e7e7e7;
+      position: relative;
+      min-height: 322px;
+      border-radius: 10px;
+      z-index: 1;
+      transition: all 0.3s linear;
+    }
+    .as_service_box:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -135px 0 0 -135px;
+      background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/circle.png);
+      width: 271px;
+      height: 270px;
+      animation: spin 9s infinite linear;
+      -webkit-animation: spin 9s infinite linear;
+      -moz-animation: spin 9s infinite linear;
+      z-index: -1;
+    }
+    .as_service_box:hover {
+      background-image: -moz-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+      background-image: -webkit-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+      background-image: -ms-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+    }
+    .as_service_box .as_icon svg {
+      fill: var(--secondary-color);
+      transition: none;
+    }
+    .as_service_box:hover .as_icon svg {
+      fill: #fff;
+    }
+    .as_service_box p {
+      transition: none;
+    }
+    .as_service_box .as_subheading {
+      margin: 40px 0 10px;
+      font-size: 20px;
+      position: relative;
+      font-weight: 600;
+      transition: none;
+    }
+    .as_service_box:hover .as_link span svg {
+      fill: #fff;
+    }
+    .as_service_box .as_link span,
+    .as_service_box .as_link span svg {
+      transition: none !important;
+      fill: var(--primary-color);
+    }
+    .as_service_box:hover .as_link,
+    .as_service_box:hover .as_subheading,
+    .as_service_box:hover p {
+      color: #fff;
+    }
+    .as_service_box:hover .as_link svg {
+      fill: #fff;
+    }
+    .as_service_img .as_service_circle {
+      margin: 60px auto;
+      margin-left: 60px;
+    }
+    .as_service_img .as_service_circle {
+      margin: auto;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+    }
+  }
+  @media (max-width: 600px) {
+    .as_service_img .as_service_circle {
+      top: 60px;
+    }
+    .as_customer_wrapper {
+      background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/bg6.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+    .as_customer_img {
+      width: 120px !important;
+      height: 120px;
+      cursor: pointer;
+    }
+    .as_customer_img img {
+      border-radius: 100%;
+      border: 5px solid #fff;
+      box-shadow: -2px 0 13px 0 rgba(0, 0, 0, 0.13);
+      width: 100%;
+    }
+    .as_customer_img:first-child {
+      margin: 16px 0 0 10px;
+    }
+    .as_customer_img:nth-child(2) {
+      margin: 155px 0 0 -40px;
+    }
+    .as_customer_img:nth-child(3) {
+      margin: 50px 0 0 -8px;
+    }
+    .as_customer_img:nth-child(4) {
+      margin: 170px 0 0 -50px;
+    }
+    .as_customer_img:nth-child(6) {
+      margin: 124px 0 0 -50px;
+    }
+    .as_customer_img:nth-child(5) {
+      margin: 5px 0 0 0;
+    }
+    .as_customer_box {
+      border-radius: 30px;
+      background-image: -moz-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+      background-image: -webkit-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+      background-image: -ms-linear-gradient(0deg, #f4aa36 0, #f37335 100%);
+      padding: 54px 50px;
+      position: relative;
+      color: #fff;
+      z-index: 1;
+      position: relative;
+    }
+    .as_customer_box:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 235px;
+      height: 235px;
+      background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/circle1.png);
+      z-index: -1;
+      animation: spin 9s infinite linear;
+      -webkit-animation: spin 9s infinite linear;
+      -moz-animation: spin 9s infinite linear;
+    }
+    .as_customer_box .as_customer_img > img {
+      border-radius: 100%;
+    }
+    .as_customer_box .as_customer_img {
+      position: relative;
+      display: inline-flex;
+      margin: -45px 0 34px;
+    }
+    .as_customer_box .as_customer_img span {
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      background-color: var(--secondary-color);
+      border-radius: 100%;
+      line-height: 32px;
+      right: -10px;
+      bottom: 0;
+    }
+    .as_customer_box .as_customer_img span img {
+      display: inline-block;
+    }
+    .as_customer_box p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .as_customer_box h3 {
+      font-size: 20px;
+      margin: 25px 0 0;
+    }
+    .as_customer_box h3 > span {
+      font-size: 15px;
+    }
+    .as_customer_img {
+      width: 100px !important;
+      height: 100px;
+    }
+    .as_customer_img:nth-child(2) {
+      margin: 110px 0 0 -42px;
+    }
+    .as_customer_img:nth-child(3) {
+      margin: 30px 0 0 -8px;
+    }
+    .as_customer_img:nth-child(4) {
+      margin: 120px 0 0 -50px;
+    }
+    .as_customer_img:nth-child(5) {
+      margin: 0;
+    }
+    .as_customer_img:nth-child(6) {
+      margin: 10px 0 0 20px;
+    }
+    .as_whychoose_wrapper {
+      background-image: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/bg5.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 150px 0 100px;
+      position: relative;
+      z-index: 1;
+    }
+    .as_whychoose_wrapper:before {
+      position: absolute;
+      content: "";
+      background: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/shape.svg)
+        no-repeat;
+      width: 100%;
+      height: 273px;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+    .as_whychoose_wrapper:after {
+      position: absolute;
+      content: "";
+      background: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/shape.svg)
+        no-repeat;
+      transform: scale(-1);
+      width: 100%;
+      height: 273px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    .as_whychoose_wrapper .as_heading {
+      color: #fff;
+    }
+    .as_whychoose_wrapper p {
+      color: #fff;
+    }
+    .as_whychoose_box .as_number > span {
+      font-size: 24px;
+      font-family: Philosopher, sans-serif;
+      font-weight: 700;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .as_whychoose_box h4 {
+      font-size: 20px;
+      margin: 25px 0 35px;
+      text-align: center;
+    }
+    .as_number {
+      display: block;
+      position: relative;
+      width: 130px;
+      margin: 0 auto;
+    }
+    .as_whychoose_box:hover h4 {
+      color: var(--secondary-color);
+    }
+    .as_choose_ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .as_choose_ul li {
+      display: inline-flex;
+      width: 19.5%;
+      justify-content: center;
+      color: #fff;
+    }
+    .as_choose_ul li:hover h4 {
+      color: var(--secondary-color);
+    }
+  }
+  @media (max-width: 1800px) {
+    .as_whychoose_wrapper:before {
+      top: -1px;
+    }
+    .as_whychoose_wrapper:after {
+      bottom: -1px;
+    }
+    .as_choose_ul li {
+      width: 33.33%;
+    }
+    .as_choose_ul {
+      text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+    .as_choose_ul li {
+      width: 100%;
+    }
+  }
+  

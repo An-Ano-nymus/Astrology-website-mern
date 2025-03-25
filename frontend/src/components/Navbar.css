@@ -1,0 +1,122 @@
+.nav-item .nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    color: #fff;
+    margin-right: 2rem;
+  }
+  
+  .nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ff5722; 
+    transition: width 0.3s ease;
+    
+  }
+  
+  .nav-item .nav-link:hover::before {
+    width: 100%;
+  }
+ 
+  .nav-item .nav-link:focus{
+    color: #F4A636 !important;
+  }
+  .navbar-nav .nav-link.active {
+    color: #ffffff; 
+  }
+  .marquee{
+    color: #fff;
+    font-weight: bold;
+    animation: slide 5s linear infinite alternate;
+  }
+  @keyframes slide {
+    0%{
+      transform: translateX(0px);
+    }
+    100%{
+      transform: translateX(600px);
+      color: #ff5722;
+    }
+  }
+  .socials i{
+    background-color: #ff5722;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid #F4A636;
+  }
+  .socials i:hover{
+    background-color: transparent;
+    border: 1px solid #F4A636;
+  }
+  .payment-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 333;
+  }
+  
+  .popup-content {
+    position: relative;
+    background-color: white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup-content button {
+    background-color: #f4a636;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .popup-content button:hover {
+    background-color: transparent;
+    border: 2px solid #f4a636;
+  }
+  
+  .qr-code {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .close-button:hover {
+    color: #555;
+  }
+  .grid-wrapper {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+  }
+  .galleryImg{
+    transition: all 1s ease;
+  }
+  .galleryImg:hover{
+    transform: scale(1.1);
+    background-color: #ffffff8b;
+  }
+  
