@@ -4,26 +4,37 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import QRCode from "qrcode";
 import { v4 as uuidv4 } from "uuid";
+import dotenv from "dotenv";
+import nodemailer from "nodemailer";
+
+dotenv.config(); // Load environment variables
 
 const app = express();
 app.use(bodyParser.json());
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-import { MongoClient, ServerApiVersion } from "mongodb";
-const uri = "mongodb+srv://raghavultimate92004:rTlXOFzEnpEiTw5y@an-ano-nymus.0tkl0.mongodb.net/?appName=An-Ano-nymus";
+// ✅ MongoDB Connection
+const uri = process.env.MONGO_URI || "mongodb+srv://raghavultimate92004:rTlXOFzEnpEiTw5y@an-ano-nymus.0tkl0.mongodb.net/?appName=An-Ano-nymus";
 
+const connectDB = async () => {
+  try {
+    await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 10000, // 10 seconds timeout
+    });
+    console.log("✅ Connected to MongoDB Atlas");
+  } catch (error) {
+    console.error("❌ MongoDB Connection Failed:", error.message);
+    process.exit(1);
+  }
+};
 
-mongoose
-  .connect(uri)
-  .then(() => {
-    console.log("Connected to DB");
-  })
-  .catch((error) => {
-    console.error("Connection to DB failed:", error);
-  });
+connectDB();
 
+// ✅ Contact Schema & Model
 const contactSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -31,23 +42,23 @@ const contactSchema = new mongoose.Schema({
   message: String,
 });
 
-const Contact = new mongoose.model("Contact", contactSchema);
+const Contact = mongoose.model("Contact", contactSchema);
 
+// ✅ Contact API
 app.post("/api/contact", async (req, res) => {
-  console.log(req.body);
-  const { name, email, subject, message } = req.body;
   try {
+    const { name, email, subject, message } = req.body;
     const newContact = new Contact({ name, email, subject, message });
     await newContact.save();
-    res.status(201).send({ message: "Successfully sent message" });
+    res.status(201).json({ message: "Successfully sent message" });
   } catch (error) {
-    console.error("Error message is not sent:", error);
-    res.status(500).send({ message: "Internal Server Error" });
+    console.error("❌ Error sending message:", error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 });
 
+// ✅ WebSocket Setup
 import { WebSocketServer } from "ws";
-
 const wss = new WebSocketServer({ port: 8080 });
 
 wss.on("connection", (ws) => {
@@ -55,8 +66,6 @@ wss.on("connection", (ws) => {
 
   ws.on("message", (message) => {
     console.log("Received message:", message);
-
-    // Broadcast the message to all other clients
     wss.clients.forEach((client) => {
       if (client !== ws && client.readyState === client.OPEN) {
         client.send(message);
@@ -69,41 +78,35 @@ wss.on("connection", (ws) => {
   });
 });
 
-console.log("WebSocket server started on ws://localhost:8080");
+console.log("✅ WebSocket server started on ws://localhost:8080");
 
-// Simulate a database for storing payment requests
+// ✅ Payment Processing
 const payments = {};
-// Payment details
-// const upi_id = "9351027145@ybl";
 const upi_id = "7982644217@ptsbi";
 const payee_name = "Test User";
 
-// Create a payment request
 app.post("/create-payment", (req, res) => {
   const { amount, courseName, email } = req.body;
   const paymentId = uuidv4();
   payments[paymentId] = { amount, courseName, email, paid: false };
+
   QRCode.toDataURL(
-    `upi://pay?pa=${upi_id}&pn=${encodeURIComponent(
-      payee_name
-    )}&am=${amount}&cu=INR`,
+    `upi://pay?pa=${upi_id}&pn=${encodeURIComponent(payee_name)}&am=${amount}&cu=INR`,
     (err, url) => {
       if (err) {
         return res.status(500).json({ error: "Failed to generate QR code" });
       }
-      console.log(paymentId,payee_name,payments);
+      console.log(paymentId, payee_name, payments);
       res.json({
-        url: `upi://pay?pa=${upi_id}&pn=${encodeURIComponent(
-          payee_name
-        )}&am=${amount}&cu=INR`,
-        paymentId: paymentId,
+        url: `upi://pay?pa=${upi_id}&pn=${encodeURIComponent(payee_name)}&am=${amount}&cu=INR`,
+        paymentId,
       });
     }
   );
 });
 
-// Handle payment confirmation
-app.post("/pay/:paymentId", (req, res) => {
+// ✅ Payment Confirmation & Email Notification
+app.post("/pay/:paymentId", async (req, res) => {
   const paymentId = req.params.paymentId;
   if (!payments[paymentId]) {
     return res.status(404).json({ error: "Payment request not found" });
@@ -115,35 +118,30 @@ app.post("/pay/:paymentId", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      // user: "rohit.20bcgc024@jecrcu.edu.in",
-      user: "raghavultimate92004@gmail.com",
-      // pass: "$rohitkumar18$",
-      pass: "Notho92004",
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS, // ✅ Secure Password Storage
     },
   });
 
   const mailOptions = {
-    from: "rohit.20bcgc024@jecrcu.edu.in",
+    from: process.env.EMAIL_USER,
     to: email,
     subject: "Payment Confirmation",
     text: `Your payment of INR ${amount} for ${description} has been successfully processed.`,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Email sent: " + info.response);
-    }
-  });
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log("✅ Email sent successfully");
+  } catch (error) {
+    console.error("❌ Email sending failed:", error);
+  }
 
-  res.json({
-    success: true,
-    message: `Payment ID ${paymentId} processed successfully`,
-  });
+  res.json({ success: true, message: `Payment ID ${paymentId} processed successfully` });
 });
 
-const port = 10000 || 6000;
+// ✅ Start Server
+const port = process.env.PORT || 10000;
 app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
+  console.log(`🚀 Server running on port ${port}`);
 });
