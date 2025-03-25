@@ -21,6 +21,7 @@ const uri = process.env.MONGO_URI || "mongodb+srv://raghavultimate92004:rTlXOFzE
 const connectDB = async () => {
   try {
     await mongoose.connect(uri, {
+      
       useNewUrlParser: true,
       useUnifiedTopology: true,
       serverSelectionTimeoutMS: 10000, // 10 seconds timeout
@@ -32,7 +33,11 @@ const connectDB = async () => {
   }
 };
 
-connectDB();
+mongoose
+  .connect(process.env.MONGO_URI, { dbName: "astro" }) 
+  .then(() => console.log("✅ Connected to DB"))
+  .catch((error) => console.error("❌ MongoDB Connection Failed:", error.message));
+
 
 // ✅ Contact Schema & Model
 const contactSchema = new mongoose.Schema({
