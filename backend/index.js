@@ -11,10 +11,12 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
 
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://raghavultimate92004:Notho 92004@an-ano-nymus.0tkl0.mongodb.net/?appName=An-Ano-nymus";
 
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/astro")
+  .connect(uri)
   .then(() => {
     console.log("Connected to DB");
   })
@@ -113,8 +115,10 @@ app.post("/pay/:paymentId", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "rohit.20bcgc024@jecrcu.edu.in",
-      pass: "$rohitkumar18$",
+      // user: "rohit.20bcgc024@jecrcu.edu.in",
+      user: "raghavultimate92004@gmail.com",
+      // pass: "$rohitkumar18$",
+      pass: "Notho92004",
     },
   });
 
