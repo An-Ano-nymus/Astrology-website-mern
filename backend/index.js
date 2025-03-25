@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+import { MongoClient, ServerApiVersion } from "mongodb";
 const uri = "mongodb+srv://raghavultimate92004:rTlXOFzEnpEiTw5y@an-ano-nymus.0tkl0.mongodb.net/?appName=An-Ano-nymus";
 
 
