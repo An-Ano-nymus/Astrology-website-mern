@@ -80,8 +80,7 @@ const ContactPage = () => {
     const newErrors = validate();
     if (Object.keys(newErrors).length === 0) {
       axios
-        .post("fetch(`${import.meta.env.VITE_API_BASE_URL}/api/contact`)
-", user)
+        .post(`${import.meta.env.VITE_API_BASE_URL}/api/contact`, user)
         .then((res) => {
           toast.success("Message sent successfully");
           setUser({ name: "", email: "", subject: "", message: "" });
