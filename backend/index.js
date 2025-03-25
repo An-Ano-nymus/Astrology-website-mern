@@ -12,7 +12,7 @@ app.use(express.urlencoded());
 app.use(cors());
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://raghavultimate92004:Notho 92004@an-ano-nymus.0tkl0.mongodb.net/?appName=An-Ano-nymus";
+const uri = "mongodb+srv://raghavultimate92004:rTlXOFzEnpEiTw5y@an-ano-nymus.0tkl0.mongodb.net/?appName=An-Ano-nymus";
 
 
 mongoose
